@@ -2,6 +2,6 @@ package interfaces;
 
 import model.School;
 
-public interface ISetSchoolWelcomeInfo {
+public interface ISetSchoolWelcomeInfoGui {
    School setSchoolWelcomeInfo();
 }

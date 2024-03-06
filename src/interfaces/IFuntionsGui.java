@@ -1,9 +1,8 @@
 package interfaces;
 
-import model.School;
 import services.SchoolServices;
 
-public interface IGuiFuntions {
+public interface IFuntionsGui {
 
     void whatDoYouWant();
     String iWantTo();

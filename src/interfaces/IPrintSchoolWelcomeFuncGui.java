@@ -2,7 +2,7 @@ package interfaces;
 
 import model.School;
 
-public interface IPrintSchoolWelcomeFunc {
+public interface IPrintSchoolWelcomeFuncGui {
     void printSchoolWelcomeInfo(School school);
 
 }
