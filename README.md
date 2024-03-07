@@ -1,5 +1,5 @@
-# OurSchool
-OurSchool is a Java-based terminal application that implements OOP and divide-and-conquer programming principles. It is under continuous development with new features being added regularly. The application is open-source and licensed under the GPL, available on GitHub.
+# School
+School is a Java-based terminal application that implements OOP and divide-and-conquer programming principles. It is under continuous development with new features being added regularly. The application is open-source and licensed under the GPL, available on GitHub.
 
 Features:
 OOP principles: OurSchool implements key OOP concepts such as classes, objects, inheritance, and polymorphism, promoting code reusability, maintainability, and extensibility.
