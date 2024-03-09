@@ -1,6 +1,7 @@
 package functions;
 
 import interfaces.IFuntionsGui;
+import model.School;
 import model.Student;
 import model.Teacher;
 import services.SchoolServices;
@@ -9,8 +10,6 @@ import java.util.Scanner;
 
 public class FunctionsGui implements IFuntionsGui {
     private static final Scanner scanner = new Scanner(System.in);
-
-
 
     @Override
     public void whatDoYouWant() {
@@ -24,26 +23,30 @@ public class FunctionsGui implements IFuntionsGui {
 
     @Override
     public void checkResponse(String iwant, SchoolServices schoolServices) {
-        switch (iwant){
-            case "adds":
-                addStudentGui(schoolServices);
-                break;
-            case "removes":
-                removeStudentGui(schoolServices);
-            case "addt":
-                addTeacherGui(schoolServices);
-                break;
-            case "removet":
-                removeTeacherGui(schoolServices);
-                break;
-            case "alls":
-                printAllStudent(schoolServices);
-                break;
-            case "allt":
-                printAllTeacher(schoolServices);
-                break;
+           
+            switch (iwant){
 
-        }
+                 case "adds":
+                     addStudentGui(schoolServices);
+                     break;
+                 case "removes":
+                     removeStudentGui(schoolServices);
+                 case "addt":
+                     addTeacherGui(schoolServices);
+                     break;
+                 case "removet":
+                     removeTeacherGui(schoolServices);
+                     break;
+                 case "alls":
+                     printAllStudent(schoolServices);
+                     break;
+                 case "allt":
+                     printAllTeacher(schoolServices);
+                     break;
+     
+            }
+ 
+        
     }
 
     @Override
@@ -69,12 +72,12 @@ public class FunctionsGui implements IFuntionsGui {
         // Name
         System.out.println("Plz enter the name: ");
         student.setName(scanner.next());
-        // Age
-        System.out.println("Plz enter the age: ");
-        student.setAge(scanner.nextInt());
-        // Phone
-        System.out.println("Plz enter phone: ");
-        student.setParentPhoneNumber(scanner.next());
+        // // Age
+        // System.out.println("Plz enter the age: ");
+        // student.setAge(scanner.nextInt());
+        // // Phone
+        // System.out.println("Plz enter phone: ");
+        // student.setParentPhoneNumber(scanner.next());
 
         // add student to list of students
         schoolServices.removeStudent(student);
@@ -103,12 +106,12 @@ public class FunctionsGui implements IFuntionsGui {
         // Name
         System.out.println("Plz enter the name: ");
         teacher.setName(scanner.next());
-        // Age
-        System.out.println("Plz enter age: ");
-        teacher.setAge(scanner.nextInt());
-        // Salary
-        System.out.println("Plz enter salary: ");
-        teacher.setSalary(scanner.nextFloat());
+        // // Age
+        // System.out.println("Plz enter age: ");
+        // teacher.setAge(scanner.nextInt());
+        // // Salary
+        // System.out.println("Plz enter salary: ");
+        // teacher.setSalary(scanner.nextFloat());
 
         // add to list of teachers
         schoolServices.removeTeacher(teacher);
@@ -128,6 +131,35 @@ public class FunctionsGui implements IFuntionsGui {
         }
     }
 
+    @Override
+    public void mainMenu(SchoolServices schoolServices) {
+        String response = "";
+        do {
+            
+            whatDoYouWant();
+            checkResponse(iWantTo(), schoolServices);
+        } while (!response.equals("close"));
+    }
+    
+    @Override
+    public void printSchoolWelcomeInfo(School school) {
+       
+            System.out.println("Welcome to " + school.getName() +
+                    "\nin " + school.getAddress() +
+                    "\nNo Phone: " + school.getPhone());
+        }
+    
+    @Override
+    public School setSchoolWelcomeInfo() {
+        
+        School school = new School();
+        school.setName("Madrasa");
+        school.setAddress("Taiz Gamal Street");
+        school.setPhone("7777777");
+        return school;
+    }
+
+   
 
 }
 
