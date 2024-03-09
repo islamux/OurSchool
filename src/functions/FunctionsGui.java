@@ -1,13 +1,13 @@
 package functions;
 
-import interfaces.IGuiFuntions;
+import interfaces.IFuntionsGui;
 import model.Student;
 import model.Teacher;
 import services.SchoolServices;
 
 import java.util.Scanner;
 
-public class FunctionsGui implements IGuiFuntions {
+public class FunctionsGui implements IFuntionsGui {
     private static final Scanner scanner = new Scanner(System.in);
 
 

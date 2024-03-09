@@ -1,11 +1,11 @@
 package functions;
 
-import interfaces.IGuiFuntions;
-import interfaces.IMainMenuFunc;
+import interfaces.IFuntionsGui;
+import interfaces.IMainMenuFuncGui;
 import services.SchoolServices;
 
-public class MainMenuFuncGui implements IMainMenuFunc {
-    IGuiFuntions functionsGui = new FunctionsGui();
+public class MainMenuFuncGuiGui implements IMainMenuFuncGui {
+    IFuntionsGui functionsGui = new FunctionsGui();
 
     @Override
     public void mainMenu(SchoolServices schoolServices) {

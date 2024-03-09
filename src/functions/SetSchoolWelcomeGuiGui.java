@@ -1,9 +1,9 @@
 package functions;
 
-import interfaces.ISetSchoolWelcomeInfo;
+import interfaces.ISetSchoolWelcomeInfoGui;
 import model.School;
 
-public class SetSchoolWelcomeGui implements ISetSchoolWelcomeInfo {
+public class SetSchoolWelcomeGuiGui implements ISetSchoolWelcomeInfoGui {
     @Override
     public School setSchoolWelcomeInfo() {
 

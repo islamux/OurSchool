@@ -1,9 +1,9 @@
 package functions;
 
-import interfaces.IPrintSchoolWelcomeFunc;
+import interfaces.IPrintSchoolWelcomeFuncGui;
 import model.School;
 
-public class PrintSchoolWelcomeGui implements IPrintSchoolWelcomeFunc {
+public class PrintSchoolWelcomeGuiGui implements IPrintSchoolWelcomeFuncGui {
 
     @Override
     public void printSchoolWelcomeInfo(School school) {
